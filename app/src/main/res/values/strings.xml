@@ -2,5 +2,9 @@
     <string name="app_name">Saged Aksara</string>
     <string name="splash_logo">Splash Logo</string>
     <string name="txt_logo">Saged Aksara</string>
+    <string name="dashboard">DASHBOARD</string>
+    <string name="app_desc">Sinau Aksara Jawa Bareng</string>
+    <string name="kamus">Kamus</string>
+    <string name="sejarah">Sejarah</string>
 
 </resources>
