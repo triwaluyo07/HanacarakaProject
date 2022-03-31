@@ -10,24 +10,25 @@ import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.TextView
 
-class SplashScreenActivity : AppCompatActivity() {
+class SplashScreenActivity : AppCompatActivity()
+{
     private lateinit var topAnimation: Animation
     private lateinit var bottomAnimation: Animation
     private lateinit var logo: ImageView
     private lateinit var txtLogo: TextView
 
-    companion object {
-        private const val delay: Long = 2000
+    companion object
+    {
+        private const val delay: Long = 1500
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?)
+    {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
-
         //Animation
         topAnimation = AnimationUtils.loadAnimation(this, R.anim.top_animation)
         bottomAnimation = AnimationUtils.loadAnimation(this, R.anim.bottom_animation)
-
         //Hooks
         logo = findViewById(R.id.logo)
         txtLogo = findViewById(R.id.txtLogo)
@@ -47,6 +48,5 @@ class SplashScreenActivity : AppCompatActivity() {
             },
             delay
         )
-
     }
 }

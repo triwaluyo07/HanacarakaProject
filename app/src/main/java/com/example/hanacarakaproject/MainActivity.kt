@@ -5,11 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.hanacarakaproject.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
-
+class MainActivity : AppCompatActivity()
+{
     private lateinit var binding: ActivityMainBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?)
+    {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -20,13 +21,11 @@ class MainActivity : AppCompatActivity() {
     private fun intentActivity()
     {
         binding.cardKamus.setOnClickListener {
-            val intent = Intent(this, KamusActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, KamusActivity::class.java))
         }
 
-        binding.cardSejarah.setOnClickListener {
-            val intent = Intent(this, SejarahActivity::class.java)
-            startActivity(intent)
+        binding.cardPengetahuanumum.setOnClickListener {
+            startActivity(Intent(this, PengetahuanUmumActivity::class.java))
         }
     }
 }

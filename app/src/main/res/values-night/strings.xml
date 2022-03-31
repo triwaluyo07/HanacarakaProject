@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Saged Aksara</string>
     <string name="splash_logo">Splash Logo</string>
@@ -12,5 +13,4 @@
     <string name="awak_manungso">Sinau Bab Perangane Awak</string>
     <string name="krama">Basa Krama</string>
     <string name="ngoko">Basa Ngoko</string>
-    <string name="build_number">Version 0.1.31 \nBuild 322.alpha_release.220331–2253</string>
 </resources>
