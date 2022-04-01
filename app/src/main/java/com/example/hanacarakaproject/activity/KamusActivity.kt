@@ -1,7 +1,8 @@
-package com.example.hanacarakaproject
+package com.example.hanacarakaproject.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.hanacarakaproject.R
 import com.example.hanacarakaproject.databinding.ActivityKamusBinding
 
 class KamusActivity : AppCompatActivity()

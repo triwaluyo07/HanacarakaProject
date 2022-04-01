@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PengetahuanUmumActivity">
+    tools:context=".activity.PengetahuanUmumActivity">
 
     <ImageView
         android:id="@+id/awak_img"
@@ -35,10 +35,22 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        tools:listitem="@layout/list_view"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/build_number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/awak_img" />
+        app:layout_constraintTop_toBottomOf="@+id/awak_img"
+        tools:listitem="@layout/list_view" />
+
+    <TextView
+        android:id="@+id/build_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:alpha="0.5"
+        android:text="@string/build_number"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/rv_awak"
+        app:layout_constraintStart_toStartOf="@+id/rv_awak"
+        tools:ignore="TextContrastCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>

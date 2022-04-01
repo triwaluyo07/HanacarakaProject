@@ -1,4 +1,4 @@
-package com.example.hanacarakaproject
+package com.example.hanacarakaproject.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,13 +9,14 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.hanacarakaproject.R
+import com.example.hanacarakaproject.databinding.ActivitySplashScreenBinding
 
 class SplashScreenActivity : AppCompatActivity()
 {
+    private lateinit var binds: ActivitySplashScreenBinding
     private lateinit var topAnimation: Animation
     private lateinit var bottomAnimation: Animation
-    private lateinit var logo: ImageView
-    private lateinit var txtLogo: TextView
 
     companion object
     {
@@ -25,16 +26,16 @@ class SplashScreenActivity : AppCompatActivity()
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash_screen)
+        binds = ActivitySplashScreenBinding.inflate(layoutInflater)
+        setContentView(binds.root)
         //Animation
         topAnimation = AnimationUtils.loadAnimation(this, R.anim.top_animation)
         bottomAnimation = AnimationUtils.loadAnimation(this, R.anim.bottom_animation)
-        //Hooks
-        logo = findViewById(R.id.logo)
-        txtLogo = findViewById(R.id.txtLogo)
 
-        logo.animation = topAnimation
-        txtLogo.animation = bottomAnimation
+        binds.apply {
+            logo.animation = topAnimation
+            txtLogo.animation = bottomAnimation
+        }
 
         Handler(Looper.getMainLooper()).postDelayed(
             {
