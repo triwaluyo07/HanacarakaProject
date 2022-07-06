@@ -7,9 +7,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.hanacarakaproject.databinding.ListViewBinding
 import com.example.hanacarakaproject.dataclass.Awak
-import com.example.hanacarakaproject.misc.ItemCallback
+import com.example.hanacarakaproject.misc.ItemCallbackAwak
 
-class AwakAdapter(private val callback : ItemCallback) : RecyclerView.Adapter<AwakAdapter.ViewHolder>()
+class AwakAdapter(private val callback : ItemCallbackAwak) : RecyclerView.Adapter<AwakAdapter.ViewHolder>()
 {
     private val listData = ArrayList<Awak>()
 

@@ -9,10 +9,10 @@ import com.example.hanacarakaproject.R
 import com.example.hanacarakaproject.adapter.AwakAdapter
 import com.example.hanacarakaproject.databinding.ActivityPengetahuanumumBinding
 import com.example.hanacarakaproject.dataclass.Awak
-import com.example.hanacarakaproject.misc.ItemCallback
+import com.example.hanacarakaproject.misc.ItemCallbackAwak
 import com.example.hanacarakaproject.viewmodel.MainViewModel
 
-class PengetahuanUmumActivity : AppCompatActivity(), ItemCallback
+class PengetahuanUmumActivity : AppCompatActivity(), ItemCallbackAwak
 {
     private lateinit var binds: ActivityPengetahuanumumBinding
 
@@ -39,7 +39,7 @@ class PengetahuanUmumActivity : AppCompatActivity(), ItemCallback
     override fun onItemClicked(data: Awak)
     {
         Toast.makeText(
-            this, "${data.ngoko}, ${data.krama}", Toast.LENGTH_SHORT
+            this, "\"${data.ngoko}\" utawa \"${data.krama}\"", Toast.LENGTH_SHORT
         ).show()
     }
 }
