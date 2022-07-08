@@ -14,35 +14,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:text="@string/dashboard"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/info_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/card_about"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/card_about"
         tools:layout_conversion_absoluteHeight="27dp"
         tools:layout_conversion_absoluteWidth="118dp" />
 
-    <Button
-        android:id="@+id/info_btn"
-        android:layout_width="54dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_about"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:contentDescription="@string/app_name"
-        android:drawableStart="@drawable/info"
-        android:elevation="16dp"
-        android:gravity="center"
-        android:onClick="about"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="DuplicateSpeakableTextCheck" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/info"
+            android:contentDescription="@string/app_name"/>
+    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_header"
         android:layout_width="0dp"
         android:layout_height="100dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:elevation="8dp"
         android:focusable="true"
@@ -51,7 +54,7 @@
         app:cardElevation="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/dashboardTitle"
-        app:layout_constraintTop_toBottomOf="@+id/info_btn"
+        app:layout_constraintTop_toBottomOf="@+id/card_about"
         tools:layout_conversion_absoluteHeight="100dp"
         tools:layout_conversion_absoluteWidth="392dp">
 

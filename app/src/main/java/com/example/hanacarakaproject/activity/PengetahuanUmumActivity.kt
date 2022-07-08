@@ -2,6 +2,7 @@ package com.example.hanacarakaproject.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ScrollView
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -24,8 +25,7 @@ class PengetahuanUmumActivity : AppCompatActivity(), ItemCallbackAwak
 
         supportActionBar?.title = getString(R.string.pngthn_tmbh)
 
-        val viewmodel = ViewModelProvider(this)
-            .get(MainViewModel(this.application)::class.java)
+        val viewmodel = ViewModelProvider(this)[MainViewModel(this.application)::class.java]
         val data = viewmodel.getListAwak()
         val adapter = AwakAdapter(this)
         adapter.setData(data)

@@ -63,7 +63,7 @@
                 android:layout_height="100dp"
                 android:layout_marginTop="24dp"
                 android:contentDescription="@string/app_name"
-                android:src="@drawable/patrick_angry"
+                android:src="@drawable/triwaluyo"
                 app:layout_constraintEnd_toEndOf="@+id/aboutDesc_txt"
                 app:layout_constraintStart_toStartOf="@+id/aboutDesc_txt"
                 app:layout_constraintTop_toBottomOf="@+id/aboutDesc_txt" />
@@ -85,7 +85,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginTop="16dp"
-                android:src="@drawable/patrick_hehe"
+                android:src="@drawable/dev"
                 app:layout_constraintEnd_toEndOf="@+id/tri_img"
                 app:layout_constraintStart_toStartOf="@+id/tri_img"
                 app:layout_constraintTop_toBottomOf="@+id/triName" />

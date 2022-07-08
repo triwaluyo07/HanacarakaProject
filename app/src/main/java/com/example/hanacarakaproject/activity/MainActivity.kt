@@ -19,16 +19,14 @@ class MainActivity : AppCompatActivity()
         intentActivity()
     }
 
-    fun about(view : View)
-    {
-//        Toast.makeText(this, "Under construction!", Toast.LENGTH_SHORT).show()
-        startActivity(Intent(this, AboutActivity::class.java))
-    }
-
     private fun intentActivity()
     {
+        binding.cardAbout.setOnClickListener {
+            startActivity(Intent(this, AboutActivity::class.java))
+        }
+
         binding.cardKamus.setOnClickListener {
-            startActivity(Intent(this, KamusActivity::class.java))
+            startActivity(Intent(this, WyanjanaActivity::class.java))
         }
 
         binding.cardPengetahuanumum.setOnClickListener {

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.hanacarakaproject">
 
     <uses-permission android:name="android.permission.CAMERA" />
@@ -15,23 +16,27 @@
         <activity
             android:name=".activity.AboutActivity"
             android:exported="false"
-            android:parentActivityName=".activity.MainActivity"/>
+            android:parentActivityName=".activity.MainActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".activity.WyanjanaActivity"
             android:exported="false"
-            android:parentActivityName=".activity.KamusActivity" />
+            android:parentActivityName=".activity.MainActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".activity.PengetahuanUmumActivity"
             android:exported="false"
-            android:parentActivityName=".activity.MainActivity" />
-        <activity
-            android:name=".activity.KamusActivity"
-            android:exported="false"
-            android:parentActivityName=".activity.MainActivity" />
+            android:parentActivityName=".activity.MainActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".activity.SplashScreenActivity"
             android:exported="true"
-            android:theme="@style/Theme.HanacarakaProject.NoActionBar">
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.HanacarakaProject.NoActionBar"
+            tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,7 +46,9 @@
         <activity
             android:name=".activity.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
