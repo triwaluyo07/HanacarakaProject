@@ -5,6 +5,11 @@
     <string name="dashboard">DASHBOARD</string>
     <string name="app_desc">Sinau Aksara Jawa Bareng</string>
     <string name="kamus">Kamus</string>
+    <string name="about">Tentang</string>
+    <string name="about_desc">Aplikasi Puniki Dipundamel Dening:</string>
+    <string name="tri">Tri Waluyo</string>
+    <string name="dev">Samuel Deviko Kelvin Setiawan</string>
+    <string name="vokal">Vokal</string>
     <string name="pngthn_tmbh">Pengetahuan Tambahan</string>
     <string name="prev_button">Previous Page Button</string>
     <string name="next_button">Next Page Button</string>
@@ -12,5 +17,5 @@
     <string name="awak_manungso">Sinau Bab Perangane Awak</string>
     <string name="krama">Basa Krama</string>
     <string name="ngoko">Basa Ngoko</string>
-    <string name="build_number">SAGED AKSARA Version 0.5.0 \nBuild 722.alpha_release.220706–1622</string>
+    <string name="build_number">SAGED AKSARA v0.5.0 \nBuild 722.alpha_release.220707–1652</string>
 </resources>

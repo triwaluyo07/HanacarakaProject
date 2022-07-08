@@ -3,18 +3,18 @@ package com.example.hanacarakaproject.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.hanacarakaproject.databinding.MainKamusViewBinding
+import com.example.hanacarakaproject.databinding.VocalListViewBinding
 import com.example.hanacarakaproject.dataclass.KamusVokal
 import com.example.hanacarakaproject.misc.ItemCallbackVokal
 
-class KamusMainAdapter(private val callback: ItemCallbackVokal) :
-    RecyclerView.Adapter<KamusMainAdapter.ViewHolder>()
+class VocalAdapter (private val callback: ItemCallbackVokal) :
+    RecyclerView.Adapter<VocalAdapter.ViewHolder>()
 {
     private val listData = ArrayList<KamusVokal>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder
     {
-        val itemBinding = MainKamusViewBinding.inflate(
+        val itemBinding = VocalListViewBinding.inflate(
             LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(itemBinding)
     }
@@ -35,7 +35,7 @@ class KamusMainAdapter(private val callback: ItemCallbackVokal) :
         listData.addAll(data)
     }
 
-    inner class ViewHolder(private val binds: MainKamusViewBinding) :
+    inner class ViewHolder (private val binds: VocalListViewBinding) :
         RecyclerView.ViewHolder(binds.root)
     {
         fun bind (data: KamusVokal)

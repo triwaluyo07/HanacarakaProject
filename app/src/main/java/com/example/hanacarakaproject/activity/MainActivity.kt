@@ -1,8 +1,9 @@
 package com.example.hanacarakaproject.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.example.hanacarakaproject.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity()
@@ -16,6 +17,12 @@ class MainActivity : AppCompatActivity()
         setContentView(binding.root)
 
         intentActivity()
+    }
+
+    fun about(view : View)
+    {
+//        Toast.makeText(this, "Under construction!", Toast.LENGTH_SHORT).show()
+        startActivity(Intent(this, AboutActivity::class.java))
     }
 
     private fun intentActivity()

@@ -3,13 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Coding/Android Studio Projects/HanacarakaProject/app/src/main/res/layout/activity_about.xml" value="0.175" />
         <entry key="..\:/Coding/Android Studio Projects/HanacarakaProject/app/src/main/res/layout/activity_kamus.xml" value="0.22" />
-        <entry key="..\:/Coding/Android Studio Projects/HanacarakaProject/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Coding/Android Studio Projects/HanacarakaProject/app/src/main/res/layout/activity_main.xml" value="0.17708333333333334" />
         <entry key="..\:/Coding/Android Studio Projects/HanacarakaProject/app/src/main/res/layout/activity_pengetahuanumum.xml" value="0.22" />
         <entry key="..\:/Coding/Android Studio Projects/HanacarakaProject/app/src/main/res/layout/activity_sejarah.xml" value="0.2" />
         <entry key="..\:/Coding/Android Studio Projects/HanacarakaProject/app/src/main/res/layout/activity_splash_screen.xml" value="0.16822916666666668" />
+        <entry key="..\:/Coding/Android Studio Projects/HanacarakaProject/app/src/main/res/layout/activity_vocal.xml" value="0.17708333333333334" />
+        <entry key="..\:/Coding/Android Studio Projects/HanacarakaProject/app/src/main/res/layout/activity_wyanjana.xml" value="0.17708333333333334" />
         <entry key="..\:/Coding/Android Studio Projects/HanacarakaProject/app/src/main/res/layout/list_view.xml" value="0.33" />
         <entry key="..\:/Coding/Android Studio Projects/HanacarakaProject/app/src/main/res/layout/main_kamus_view.xml" value="0.33" />
+        <entry key="..\:/Coding/Android Studio Projects/HanacarakaProject/app/src/main/res/layout/vocal_list_view.xml" value="0.17708333333333334" />
+        <entry key="..\:/Coding/Android Studio Projects/HanacarakaProject/app/src/main/res/layout/wyanjana_list_view.xml" value="0.17708333333333334" />
         <entry key="..\:/Users/triwa/AndroidStudioProjects/HanacarakaProject/app/src/main/res/drawable/ic_launcher_background.xml" value="0.12" />
         <entry key="..\:/Users/triwa/AndroidStudioProjects/HanacarakaProject/app/src/main/res/layout/activity_main.xml" value="0.17481884057971014" />
         <entry key="..\:/Users/triwa/AndroidStudioProjects/HanacarakaProject/app/src/main/res/layout/activity_splash_screen.xml" value="0.2" />

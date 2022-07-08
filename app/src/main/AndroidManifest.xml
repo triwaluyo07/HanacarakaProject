@@ -13,6 +13,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight">
         <activity
+            android:name=".activity.AboutActivity"
+            android:exported="false"
+            android:parentActivityName=".activity.MainActivity"/>
+        <activity
+            android:name=".activity.WyanjanaActivity"
+            android:exported="false"
+            android:parentActivityName=".activity.KamusActivity" />
+        <activity
             android:name=".activity.PengetahuanUmumActivity"
             android:exported="false"
             android:parentActivityName=".activity.MainActivity" />
@@ -26,15 +34,18 @@
             android:theme="@style/Theme.HanacarakaProject.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".activity.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
+
 </manifest>

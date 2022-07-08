@@ -4,7 +4,9 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class KamusVokal (
+data class Wyanjana (
+    val vocal: Char,
     val id: Int,
-    val name: String
+    val img: Int,
+    val script: String
 ): Parcelable

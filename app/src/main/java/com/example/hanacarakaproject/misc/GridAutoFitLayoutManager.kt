@@ -7,25 +7,17 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Recycler
 
-class GridAutoFitLayoutManager : GridLayoutManager
+class GridAutoFitLayoutManager/* Initially set spanCount to 1, will be changed automatically later. */(
+    @NonNull context: Context,
+    columnWidth: Int
+) : GridLayoutManager(context, 1)
 {
     private var columnWidth = 0
     private var isColumnWidthChanged = true
     private var lastWidth = 0
     private var lastHeight = 0
 
-    constructor(@NonNull context: Context, columnWidth: Int) : super(context, 1)
-    {
-        /* Initially set spanCount to 1, will be changed automatically later. */
-        setColumnWidth(checkedColumnWidth(context, columnWidth))
-    }
-
-    constructor(
-        @NonNull context: Context,
-        columnWidth: Int,
-        orientation: Int,
-        reverseLayout: Boolean
-    ) : super(context, 1, orientation, reverseLayout)
+    init
     {
         setColumnWidth(checkedColumnWidth(context, columnWidth))
     }
@@ -37,13 +29,13 @@ class GridAutoFitLayoutManager : GridLayoutManager
         {
             columnWidth = TypedValue.applyDimension(
                 TypedValue.COMPLEX_UNIT_DIP, 48f,
-                context.getResources().getDisplayMetrics()
+                context.resources.displayMetrics
             ).toInt()
         }
         return columnWidth
     }
 
-    fun setColumnWidth(newColumnWidth: Int)
+    private fun setColumnWidth(newColumnWidth: Int)
     {
         if (newColumnWidth > 0 && newColumnWidth != columnWidth)
         {
@@ -58,8 +50,7 @@ class GridAutoFitLayoutManager : GridLayoutManager
         val height = height
         if (columnWidth > 0 && width > 0 && height > 0 && (isColumnWidthChanged || lastWidth != width || lastHeight != height))
         {
-            val totalSpace: Int
-            totalSpace = if (orientation == VERTICAL)
+            val totalSpace: Int = if (orientation == VERTICAL)
             {
                 width - paddingRight - paddingLeft
             }
@@ -67,7 +58,7 @@ class GridAutoFitLayoutManager : GridLayoutManager
             {
                 height - paddingTop - paddingBottom
             }
-            val spanCount = Math.max(1, totalSpace / columnWidth)
+            val spanCount = 1.coerceAtLeast(totalSpace / columnWidth)
             setSpanCount(spanCount)
             isColumnWidthChanged = false
         }
