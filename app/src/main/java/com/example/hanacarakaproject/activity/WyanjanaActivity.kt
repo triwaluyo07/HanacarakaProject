@@ -1,20 +1,20 @@
 package com.example.hanacarakaproject.activity
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.hanacarakaproject.R
 import com.example.hanacarakaproject.adapter.WyanjanaAdapter
 import com.example.hanacarakaproject.databinding.ActivityWyanjanaBinding
 import com.example.hanacarakaproject.dataclass.Wyanjana
-import com.example.hanacarakaproject.misc.ItemCallbackWyanjana
 import com.example.hanacarakaproject.viewmodel.MainViewModel
 
-class WyanjanaActivity : AppCompatActivity(), ItemCallbackWyanjana
+class WyanjanaActivity : AppCompatActivity()
 {
     private lateinit var binds: ActivityWyanjanaBinding
+    private lateinit var rvAdapter: WyanjanaAdapter
 
     override fun onCreate(savedInstanceState: Bundle?)
     {
@@ -26,18 +26,22 @@ class WyanjanaActivity : AppCompatActivity(), ItemCallbackWyanjana
 
         val viewmodel = ViewModelProvider(this)[MainViewModel(this.application)::class.java]
         val data = viewmodel.getListWyanjana()
-        val adapter = WyanjanaAdapter(this)
-        adapter.setData(data)
+        rvAdapter = WyanjanaAdapter(this@WyanjanaActivity)
+        rvAdapter.setData(data)
 
-        with(binds.rvDictionary) {
-            layoutManager = GridLayoutManager(this@WyanjanaActivity, 2)
-            this.adapter = adapter
+        binds.apply {
+            rvDictionary.layoutManager = GridLayoutManager(this@WyanjanaActivity, 2)
+            rvDictionary.adapter = rvAdapter
+            rvAdapter.setOnItemClickCallback(object : WyanjanaAdapter.OnItemClickCallback
+            {
+                override fun onItemClicked(data: Wyanjana)
+                {
+                    startActivity(Intent(this@WyanjanaActivity, DetailAksaraActivity::class.java)
+                        .also {
+                            it.putExtra(DetailAksaraActivity.EXT_SCRIPT, data.script)
+                        })
+                }
+            })
         }
-    }
-
-    override fun onClicked(data: Wyanjana)
-    {
-        Toast.makeText(this, data.script, Toast.LENGTH_SHORT)
-            .show()
     }
 }
